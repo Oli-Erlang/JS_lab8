@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Свойства объекта Document</title>
+		<script language="javascript">
+			function showInfo() {
+
+            document.bgColor = "black";
+            document.fgColor = "white";
+            document.linkColor = "pink";
+            document.vlinkColor = "red";
+            document.alinkColor = "blue";
+			
+			var bgc = document.bgColor.valueOf();
+			var fgc = document.fgColor.valueOf();
+			var lc = document.linkColor.valueOf();
+			var al = document.alinkColor.valueOf();
+			var vlc = document.vlinkColor.valueOf();
+			var url = document.location.valueOf();
+			var ref = document.referrer.valueOf();
+			var t = document.title.valueOf();
+			var lm = document.lastModified.valueOf();
+			
+			document.write("Цвет фона этой страницы <B>" +bgc+ "</B>.");
+			document.write("<br> Цвет текста этой страницы <B>" +fgc+ "</B>.");
+			document.write("<br> Цвет ссылок этой страницы <B>" +lc+ "</B>.");
+			document.write("<br> Цвет активной ссылки этой страницы <B>" +al+ "</B>.");
+			document.write("<br> Цвет посещенной ссылки этой страницы <B>" +vlc+ "</B>.");
+			document.write("<br> URL этой страницы <B>" + url + "</B>.");
+			document.write("<br> До этого вы были на странице <B>" +ref+ "</B>.");
+			document.write("<br> Заголовок этой страницы <B>" +t+ "</B>.");
+			document.write("<br> Последние изменения в документ внесены: <B>" +lm+ "</B>.");
+		}
+		</script>
+	</head>
+	<body>
+		<input type="button" value="Show info about page" onclick="showInfo()">
+	</body>
+</html>
